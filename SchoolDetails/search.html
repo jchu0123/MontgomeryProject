@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>School Search Results - Montgomery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Header / Navigation Area -->
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-4">
+<a href="index.html" class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors inline-block">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">arrow_back</span>
+</a>
+<h1 class="text-xl font-bold tracking-tight">Montgomery Schools</h1>
+</div>
+<div class="hidden md:flex items-center space-x-4">
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-white font-medium hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-sm">filter_list</span>
+                        Filters
+                    </button>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<!-- Search and Info Section -->
+<div class="mb-8">
+<nav class="flex items-center gap-2 mb-6">
+<a class="flex items-center gap-1 text-sm font-medium text-primary hover:underline" href="index.html">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+                    Back to search
+                </a>
+</nav>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h2 class="text-3xl font-extrabold text-slate-900 dark:text-slate-50">128 schools found</h2>
+<p class="mt-2 text-slate-500 dark:text-slate-400">Showing results for "Montgomery" region</p>
+</div>
+<div class="w-full md:w-96">
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-slate-400 group-focus-within:text-primary transition-colors">search</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-3 border border-slate-200 dark:border-slate-700 rounded-xl bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-primary transition-all text-sm" placeholder="Search schools..." type="text" value="Montgomery"/>
+</div>
+</div>
+</div>
+</div>
+<!-- School Results Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<!-- School Card 1 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="h-40 bg-primary/5 dark:bg-primary/10 flex items-center justify-center p-6">
+<img class="w-full h-full object-contain" data-alt="Clean cartoon illustration of a school building" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDDOq6lP7oMEjupblnskosFmXVYbhxEOL1rQQMQ7Koq3FZoUwlMTBYdbeSUmTbC8jHcNiG0ASiFdZNqwB00pPPHGHbTP-IU0PJBCUxPBghzXQ48XwX-jSY0fXHwYOT2ePTLNctzElN2WNuWy_klNr8WasXy5y5Jm2ct54JyUoZuXQXT493u524XRnQDUwIXc2AgTKU3VsL7hkN9aA8D65zXjEDd7JfRmk2_LqTHX3ToJxxW-evNFDTnRIDLFm2pYrcSoF4WGFX3ZpI"/>
+</div>
+<div class="p-5">
+<div class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-primary/10 text-primary mb-3">Public School</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 line-clamp-1">Montgomery Heights Elementary</h3>
+<div class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-base mt-0.5 text-slate-400">location_on</span>
+<span>1242 Education Way, Montgomery, AL 36104</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-slate-400">call</span>
+<span>(334) 555-0123</span>
+</div>
+</div>
+<a href="details1.html" class="mt-6 w-full block text-center py-2 px-4 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-semibold rounded-lg hover:bg-primary hover:text-white transition-all duration-200">
+                        View Profile
+                    </a>
+</div>
+</div>
+<!-- School Card 2 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="h-40 bg-primary/5 dark:bg-primary/10 flex items-center justify-center p-6">
+<img class="w-full h-full object-contain" data-alt="Clean cartoon illustration of a school building" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDDOq6lP7oMEjupblnskosFmXVYbhxEOL1rQQMQ7Koq3FZoUwlMTBYdbeSUmTbC8jHcNiG0ASiFdZNqwB00pPPHGHbTP-IU0PJBCUxPBghzXQ48XwX-jSY0fXHwYOT2ePTLNctzElN2WNuWy_klNr8WasXy5y5Jm2ct54JyUoZuXQXT493u524XRnQDUwIXc2AgTKU3VsL7hkN9aA8D65zXjEDd7JfRmk2_LqTHX3ToJxxW-evNFDTnRIDLFm2pYrcSoF4WGFX3ZpI"/>
+</div>
+<div class="p-5">
+<div class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-emerald-100 text-emerald-700 mb-3">Charter School</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 line-clamp-1">Oak Valley Science Academy</h3>
+<div class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-base mt-0.5 text-slate-400">location_on</span>
+<span>890 Innovation Dr, Montgomery, AL 36117</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-slate-400">call</span>
+<span>(334) 555-0198</span>
+</div>
+</div>
+<a href="details2.html" class="mt-6 w-full block text-center py-2 px-4 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-semibold rounded-lg hover:bg-primary hover:text-white transition-all duration-200">
+                        View Profile
+                    </a>
+</div>
+</div>
+<!-- School Card 3 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="h-40 bg-primary/5 dark:bg-primary/10 flex items-center justify-center p-6">
+<img class="w-full h-full object-contain" data-alt="Clean cartoon illustration of a school building" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDDOq6lP7oMEjupblnskosFmXVYbhxEOL1rQQMQ7Koq3FZoUwlMTBYdbeSUmTbC8jHcNiG0ASiFdZNqwB00pPPHGHbTP-IU0PJBCUxPBghzXQ48XwX-jSY0fXHwYOT2ePTLNctzElN2WNuWy_klNr8WasXy5y5Jm2ct54JyUoZuXQXT493u524XRnQDUwIXc2AgTKU3VsL7hkN9aA8D65zXjEDd7JfRmk2_LqTHX3ToJxxW-evNFDTnRIDLFm2pYrcSoF4WGFX3ZpI"/>
+</div>
+<div class="p-5">
+<div class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-amber-100 text-amber-700 mb-3">Private School</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 line-clamp-1">St. Jude Collegiate School</h3>
+<div class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-base mt-0.5 text-slate-400">location_on</span>
+<span>2042 Cathedral Blvd, Montgomery, AL 36106</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-slate-400">call</span>
+<span>(334) 555-0456</span>
+</div>
+</div>
+<button class="mt-6 w-full py-2 px-4 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-semibold rounded-lg hover:bg-primary hover:text-white transition-all duration-200">
+                        View Profile
+                    </button>
+</div>
+</div>
+<!-- School Card 4 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="h-40 bg-primary/5 dark:bg-primary/10 flex items-center justify-center p-6">
+<img class="w-full h-full object-contain" data-alt="Clean cartoon illustration of a school building" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDDOq6lP7oMEjupblnskosFmXVYbhxEOL1rQQMQ7Koq3FZoUwlMTBYdbeSUmTbC8jHcNiG0ASiFdZNqwB00pPPHGHbTP-IU0PJBCUxPBghzXQ48XwX-jSY0fXHwYOT2ePTLNctzElN2WNuWy_klNr8WasXy5y5Jm2ct54JyUoZuXQXT493u524XRnQDUwIXc2AgTKU3VsL7hkN9aA8D65zXjEDd7JfRmk2_LqTHX3ToJxxW-evNFDTnRIDLFm2pYrcSoF4WGFX3ZpI"/>
+</div>
+<div class="p-5">
+<div class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-primary/10 text-primary mb-3">Public School</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 line-clamp-1">Riverfront Junior High</h3>
+<div class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-base mt-0.5 text-slate-400">location_on</span>
+<span>55 Commerce St, Montgomery, AL 36104</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-slate-400">call</span>
+<span>(334) 555-0777</span>
+</div>
+</div>
+<button class="mt-6 w-full py-2 px-4 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-semibold rounded-lg hover:bg-primary hover:text-white transition-all duration-200">
+                        View Profile
+                    </button>
+</div>
+</div>
+<!-- Repeat Card 1 style for extra items -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="h-40 bg-primary/5 dark:bg-primary/10 flex items-center justify-center p-6">
+<img class="w-full h-full object-contain" data-alt="Clean cartoon illustration of a school building" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDDOq6lP7oMEjupblnskosFmXVYbhxEOL1rQQMQ7Koq3FZoUwlMTBYdbeSUmTbC8jHcNiG0ASiFdZNqwB00pPPHGHbTP-IU0PJBCUxPBghzXQ48XwX-jSY0fXHwYOT2ePTLNctzElN2WNuWy_klNr8WasXy5y5Jm2ct54JyUoZuXQXT493u524XRnQDUwIXc2AgTKU3VsL7hkN9aA8D65zXjEDd7JfRmk2_LqTHX3ToJxxW-evNFDTnRIDLFm2pYrcSoF4WGFX3ZpI"/>
+</div>
+<div class="p-5">
+<div class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-purple-100 text-purple-700 mb-3">Montessori</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 line-clamp-1">Blue Sky Montessori</h3>
+<div class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-base mt-0.5 text-slate-400">location_on</span>
+<span>3112 Parkview Ln, Montgomery, AL 36111</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-slate-400">call</span>
+<span>(334) 555-0888</span>
+</div>
+</div>
+<button class="mt-6 w-full py-2 px-4 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-semibold rounded-lg hover:bg-primary hover:text-white transition-all duration-200">
+                        View Profile
+                    </button>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="h-40 bg-primary/5 dark:bg-primary/10 flex items-center justify-center p-6">
+<img class="w-full h-full object-contain" data-alt="Clean cartoon illustration of a school building" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDDOq6lP7oMEjupblnskosFmXVYbhxEOL1rQQMQ7Koq3FZoUwlMTBYdbeSUmTbC8jHcNiG0ASiFdZNqwB00pPPHGHbTP-IU0PJBCUxPBghzXQ48XwX-jSY0fXHwYOT2ePTLNctzElN2WNuWy_klNr8WasXy5y5Jm2ct54JyUoZuXQXT493u524XRnQDUwIXc2AgTKU3VsL7hkN9aA8D65zXjEDd7JfRmk2_LqTHX3ToJxxW-evNFDTnRIDLFm2pYrcSoF4WGFX3ZpI"/>
+</div>
+<div class="p-5">
+<div class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-primary/10 text-primary mb-3">Public School</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 line-clamp-1">Central Montgomery High</h3>
+<div class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-base mt-0.5 text-slate-400">location_on</span>
+<span>1227 High St, Montgomery, AL 36104</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-slate-400">call</span>
+<span>(334) 555-1212</span>
+</div>
+</div>
+<button class="mt-6 w-full py-2 px-4 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-semibold rounded-lg hover:bg-primary hover:text-white transition-all duration-200">
+                        View Profile
+                    </button>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-12 flex items-center justify-center gap-2">
+<button class="p-2 border border-slate-200 dark:border-slate-800 rounded-lg hover:bg-white dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 bg-primary text-white rounded-lg font-medium">1</button>
+<button class="w-10 h-10 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">2</button>
+<button class="w-10 h-10 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">3</button>
+<span class="px-2 text-slate-400">...</span>
+<button class="w-10 h-10 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">12</button>
+<button class="p-2 border border-slate-200 dark:border-slate-800 rounded-lg hover:bg-white dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</main>
+<!-- Bottom Navigation (Mobile Only) -->
+<div class="fixed bottom-0 left-0 right-0 md:hidden bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-4 py-2 flex items-center justify-around z-50">
+<a class="flex flex-col items-center gap-0.5 text-primary" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="text-[10px] font-medium">Search</span>
+</a>
+<a class="flex flex-col items-center gap-0.5 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">favorite</span>
+<span class="text-[10px] font-medium">Saved</span>
+</a>
+<a class="flex flex-col items-center gap-0.5 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="text-[10px] font-medium">Map</span>
+</a>
+<a class="flex flex-col items-center gap-0.5 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</div>
+</body></html>
