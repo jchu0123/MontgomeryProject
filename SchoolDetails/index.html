@@ -78,9 +78,9 @@
 <div class="flex flex-col sm:flex-row gap-3 p-2 bg-white dark:bg-slate-800 rounded-xl shadow-xl shadow-primary/5 border border-primary/10">
 <div class="flex flex-1 items-center bg-background-light dark:bg-slate-700/50 rounded-lg px-4 h-14">
 <span class="material-symbols-outlined text-primary/60 mr-3">search</span>
-<input class="w-full border-none bg-transparent focus:ring-0 text-slate-900 dark:text-white placeholder:text-slate-400 text-base" placeholder="Search by school name, address, or city" type="text"/>
+<input id="homeSearchBar" class="w-full border-none bg-transparent focus:ring-0 text-slate-900 dark:text-white placeholder:text-slate-400 text-base" placeholder="Search by school name, address, or city" type="text"/>
 </div>
-<a href="search.html" class="bg-primary hover:bg-primary/90 text-white font-bold h-14 px-8 rounded-lg transition-all flex items-center justify-center gap-2">
+<a href="search.html" id="homeSearchBtn" class="bg-primary hover:bg-primary/90 text-white font-bold h-14 px-8 rounded-lg transition-all flex items-center justify-center gap-2">
 <span class="material-symbols-outlined">search</span>
                                 Search
                             </a>
@@ -167,4 +167,28 @@
 <p class="text-sm text-slate-400 dark:text-slate-600">© 2024 MGM School Finder. All rights reserved.</p>
 </div>
 </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const searchBar = document.getElementById('homeSearchBar');
+        const searchBtn = document.getElementById('homeSearchBtn');
+
+        const performSearch = (e) => {
+            e.preventDefault();
+            const query = searchBar.value.trim();
+            if (query) {
+                window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+            } else {
+                window.location.href = 'search.html';
+            }
+        };
+
+        searchBtn.addEventListener('click', performSearch);
+        searchBar.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                performSearch(e);
+            }
+        });
+    });
+</script>
 </body></html>

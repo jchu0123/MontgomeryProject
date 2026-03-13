@@ -63,15 +63,15 @@
 </nav>
 <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
 <div>
-<h2 class="text-3xl font-extrabold text-slate-900 dark:text-slate-50">128 schools found</h2>
-<p class="mt-2 text-slate-500 dark:text-slate-400">Showing results for "Montgomery" region</p>
+<h2 id="searchResultCount" class="text-3xl font-extrabold text-slate-900 dark:text-slate-50">128 schools found</h2>
+<p id="searchQueryText" class="mt-2 text-slate-500 dark:text-slate-400">Showing results for "Montgomery" region</p>
 </div>
 <div class="w-full md:w-96">
 <div class="relative group">
 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
 <span class="material-symbols-outlined text-slate-400 group-focus-within:text-primary transition-colors">search</span>
 </div>
-<input class="block w-full pl-10 pr-3 py-3 border border-slate-200 dark:border-slate-700 rounded-xl bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-primary transition-all text-sm" placeholder="Search schools..." type="text" value="Montgomery"/>
+<input id="searchInput" class="block w-full pl-10 pr-3 py-3 border border-slate-200 dark:border-slate-700 rounded-xl bg-white dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-primary transition-all text-sm" placeholder="Search schools..." type="text" value=""/>
 </div>
 </div>
 </div>
@@ -79,7 +79,7 @@
 <!-- School Results Grid -->
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
 <!-- School Card 1 -->
-<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow duration-300 school-card">
 <div class="h-40 bg-primary/5 dark:bg-primary/10 flex items-center justify-center p-6">
 <img class="w-full h-full object-contain" data-alt="Clean cartoon illustration of a school building" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDDOq6lP7oMEjupblnskosFmXVYbhxEOL1rQQMQ7Koq3FZoUwlMTBYdbeSUmTbC8jHcNiG0ASiFdZNqwB00pPPHGHbTP-IU0PJBCUxPBghzXQ48XwX-jSY0fXHwYOT2ePTLNctzElN2WNuWy_klNr8WasXy5y5Jm2ct54JyUoZuXQXT493u524XRnQDUwIXc2AgTKU3VsL7hkN9aA8D65zXjEDd7JfRmk2_LqTHX3ToJxxW-evNFDTnRIDLFm2pYrcSoF4WGFX3ZpI"/>
 </div>
@@ -102,7 +102,7 @@
 </div>
 </div>
 <!-- School Card 2 -->
-<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow duration-300 school-card">
 <div class="h-40 bg-primary/5 dark:bg-primary/10 flex items-center justify-center p-6">
 <img class="w-full h-full object-contain" data-alt="Clean cartoon illustration of a school building" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDDOq6lP7oMEjupblnskosFmXVYbhxEOL1rQQMQ7Koq3FZoUwlMTBYdbeSUmTbC8jHcNiG0ASiFdZNqwB00pPPHGHbTP-IU0PJBCUxPBghzXQ48XwX-jSY0fXHwYOT2ePTLNctzElN2WNuWy_klNr8WasXy5y5Jm2ct54JyUoZuXQXT493u524XRnQDUwIXc2AgTKU3VsL7hkN9aA8D65zXjEDd7JfRmk2_LqTHX3ToJxxW-evNFDTnRIDLFm2pYrcSoF4WGFX3ZpI"/>
 </div>
@@ -125,7 +125,7 @@
 </div>
 </div>
 <!-- School Card 3 -->
-<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow duration-300 school-card">
 <div class="h-40 bg-primary/5 dark:bg-primary/10 flex items-center justify-center p-6">
 <img class="w-full h-full object-contain" data-alt="Clean cartoon illustration of a school building" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDDOq6lP7oMEjupblnskosFmXVYbhxEOL1rQQMQ7Koq3FZoUwlMTBYdbeSUmTbC8jHcNiG0ASiFdZNqwB00pPPHGHbTP-IU0PJBCUxPBghzXQ48XwX-jSY0fXHwYOT2ePTLNctzElN2WNuWy_klNr8WasXy5y5Jm2ct54JyUoZuXQXT493u524XRnQDUwIXc2AgTKU3VsL7hkN9aA8D65zXjEDd7JfRmk2_LqTHX3ToJxxW-evNFDTnRIDLFm2pYrcSoF4WGFX3ZpI"/>
 </div>
@@ -148,7 +148,7 @@
 </div>
 </div>
 <!-- School Card 4 -->
-<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow duration-300 school-card">
 <div class="h-40 bg-primary/5 dark:bg-primary/10 flex items-center justify-center p-6">
 <img class="w-full h-full object-contain" data-alt="Clean cartoon illustration of a school building" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDDOq6lP7oMEjupblnskosFmXVYbhxEOL1rQQMQ7Koq3FZoUwlMTBYdbeSUmTbC8jHcNiG0ASiFdZNqwB00pPPHGHbTP-IU0PJBCUxPBghzXQ48XwX-jSY0fXHwYOT2ePTLNctzElN2WNuWy_klNr8WasXy5y5Jm2ct54JyUoZuXQXT493u524XRnQDUwIXc2AgTKU3VsL7hkN9aA8D65zXjEDd7JfRmk2_LqTHX3ToJxxW-evNFDTnRIDLFm2pYrcSoF4WGFX3ZpI"/>
 </div>
@@ -171,7 +171,7 @@
 </div>
 </div>
 <!-- Repeat Card 1 style for extra items -->
-<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow duration-300 school-card">
 <div class="h-40 bg-primary/5 dark:bg-primary/10 flex items-center justify-center p-6">
 <img class="w-full h-full object-contain" data-alt="Clean cartoon illustration of a school building" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDDOq6lP7oMEjupblnskosFmXVYbhxEOL1rQQMQ7Koq3FZoUwlMTBYdbeSUmTbC8jHcNiG0ASiFdZNqwB00pPPHGHbTP-IU0PJBCUxPBghzXQ48XwX-jSY0fXHwYOT2ePTLNctzElN2WNuWy_klNr8WasXy5y5Jm2ct54JyUoZuXQXT493u524XRnQDUwIXc2AgTKU3VsL7hkN9aA8D65zXjEDd7JfRmk2_LqTHX3ToJxxW-evNFDTnRIDLFm2pYrcSoF4WGFX3ZpI"/>
 </div>
@@ -194,7 +194,7 @@
 </div>
 </div>
 <!-- Card 6 -->
-<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden hover:shadow-lg transition-shadow duration-300 school-card">
 <div class="h-40 bg-primary/5 dark:bg-primary/10 flex items-center justify-center p-6">
 <img class="w-full h-full object-contain" data-alt="Clean cartoon illustration of a school building" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDDOq6lP7oMEjupblnskosFmXVYbhxEOL1rQQMQ7Koq3FZoUwlMTBYdbeSUmTbC8jHcNiG0ASiFdZNqwB00pPPHGHbTP-IU0PJBCUxPBghzXQ48XwX-jSY0fXHwYOT2ePTLNctzElN2WNuWy_klNr8WasXy5y5Jm2ct54JyUoZuXQXT493u524XRnQDUwIXc2AgTKU3VsL7hkN9aA8D65zXjEDd7JfRmk2_LqTHX3ToJxxW-evNFDTnRIDLFm2pYrcSoF4WGFX3ZpI"/>
 </div>
@@ -251,4 +251,59 @@
 <span class="text-[10px] font-medium">Profile</span>
 </a>
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        let currentQuery = urlParams.get('q') || '';
+        
+        const searchInput = document.getElementById('searchInput');
+        const resultCount = document.getElementById('searchResultCount');
+        const queryText = document.getElementById('searchQueryText');
+        const schoolCards = document.querySelectorAll('.school-card');
+
+        const filterSchools = (query) => {
+            const lowerQuery = query.toLowerCase();
+            let visibleCount = 0;
+
+            schoolCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                if (title.includes(lowerQuery)) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            resultCount.textContent = `${visibleCount} school${visibleCount !== 1 ? 's' : ''} found`;
+            if (query) {
+                queryText.textContent = `Showing results for "${query}"`;
+                queryText.style.display = 'block';
+            } else {
+                queryText.style.display = 'none';
+            }
+        };
+
+        // Initial filter on page load from URL param
+        if (currentQuery) {
+            searchInput.value = currentQuery;
+        }
+        filterSchools(currentQuery);
+
+        // Live filtering as user types
+        searchInput.addEventListener('input', (e) => {
+            const newQuery = e.target.value;
+            // Update URL without reloading the page
+            const newUrl = new URL(window.location);
+            if (newQuery) {
+                newUrl.searchParams.set('q', newQuery);
+            } else {
+                newUrl.searchParams.delete('q');
+            }
+            window.history.replaceState({}, '', newUrl);
+            
+            filterSchools(newQuery);
+        });
+    });
+</script>
 </body></html>
